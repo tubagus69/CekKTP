@@ -6,13 +6,112 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:id="@+id/nikInput"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:text="Nik :"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/namaInput"
+        android:layout_width="379dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Nama :"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/nikInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="19dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="324dp"
+        android:padding="24dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/nik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Nik :"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tmplahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nama"
+            android:layout_marginTop="5dp"
+            android:text="tempat-lahir :"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nik"
+            android:layout_marginTop="5dp"
+            android:text="Nama :"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/namaPenerima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nama"
+            android:layout_marginTop="36dp"
+            android:text=""
+            android:textStyle="normal" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="271dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="88dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="handleRequest"
+        android:text="Cari"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nikInput" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Kembali"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

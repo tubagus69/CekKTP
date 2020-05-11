@@ -10,7 +10,6 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -25,11 +24,10 @@ android {
         targetCompatibility = "8"
         sourceCompatibility = "8"
     }
-    repositories {
-        jcenter()
-        maven { url 'https://jitpack.io' }
-        google()
-    }
+}
+repositories {
+    jcenter()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -40,8 +38,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    //preference
-    implementation 'androidx.preference:preference:1.1.0'
+
     //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.7.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
@@ -52,6 +49,8 @@ dependencies {
     implementation "com.google.android.material:material:1.2.0-alpha05"
     //recycleview
     implementation 'com.mikepenz:fastadapter:3.3.1'
+    //fastadapter
+    implementation 'com.mikepenz:fastadapter:3.3.1'
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
     //dexter
@@ -60,11 +59,13 @@ dependencies {
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
     //sharedPref
     implementation 'androidx.preference:preference:1.1.0'
+    //cardview
+    implementation "androidx.cardview:cardview:1.0.0"
     //startapp
-    implementation 'com.startapp:inapp-sdk:4.3.0'
+//    implementation 'com.startapp:inapp-sdk:4.3.0'
 //    admob
-    implementation 'com.google.android.gms:play-services-ads:19.1.0'
+//    implementation 'com.google.android.gms:play-services-ads:19.1.0'
 //    privacy
-    implementation 'com.github.khirr:Android-Privacy-Policy:1.0.1'
+//    implementation 'com.github.khirr:Android-Privacy-Policy:1.0.1'
 
 }
