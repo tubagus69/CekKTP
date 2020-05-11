@@ -12,7 +12,7 @@ import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
-    @Multipart
+
     @GET("/cekktp")
     Call<Response> getKTP(@Query("nik") String nik, @Query("nama") String nama, @Query("api_key") String key
     );

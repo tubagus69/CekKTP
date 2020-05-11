@@ -11,7 +11,7 @@
         android:id="@+id/nikInput"
         android:layout_width="380dp"
         android:layout_height="53dp"
-        android:text="Nik :"
+        android:hint="NIK :"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="19dp"
         tools:layout_editor_absoluteY="43dp"
@@ -24,7 +24,7 @@
         android:layout_width="379dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:text="Nama :"
+        android:hint="Nama :"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/nikInput"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,16 +62,18 @@
             android:textColor="@color/design_default_color_on_secondary"
             android:textSize="20sp"
             android:textStyle="normal" />
+
         <TextView
             android:id="@+id/jnskelamin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/nama"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="35dp"
             android:text="Jenis Kelamin :"
             android:textColor="@color/design_default_color_on_secondary"
             android:textSize="20sp"
             android:textStyle="normal" />
+
         <TextView
             android:id="@+id/nama"
             android:layout_width="match_parent"
