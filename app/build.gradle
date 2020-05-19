@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "id.ac.bismillah_ktp"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -28,7 +28,9 @@ android {
 repositories {
     jcenter()
     maven { url 'https://jitpack.io' }
+    google()
 }
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -47,25 +49,16 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     //material design
     implementation "com.google.android.material:material:1.2.0-alpha05"
-    //recycleview
-    implementation 'com.mikepenz:fastadapter:3.3.1'
-    //fastadapter
-    implementation 'com.mikepenz:fastadapter:3.3.1'
-    //picasso
+    //FastAdapter
+    //library
     implementation 'com.squareup.picasso:picasso:2.71828'
-    //dexter
-    implementation 'com.karumi:dexter:4.2.0'
-    //spinkit
-    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
-    //sharedPref
-    implementation 'androidx.preference:preference:1.1.0'
-    //cardview
-    implementation "androidx.cardview:cardview:1.0.0"
+    implementation 'com.mikepenz:fastadapter-commons:3.3.1'
     //startapp
-//    implementation 'com.startapp:inapp-sdk:4.3.0'
-//    admob
-//    implementation 'com.google.android.gms:play-services-ads:19.1.0'
-//    privacy
-//    implementation 'com.github.khirr:Android-Privacy-Policy:1.0.1'
+    implementation 'com.startapp:inapp-sdk:4.3.0'
+    //admob
+    implementation 'com.google.android.gms:play-services-ads:19.1.0'
+    //privacy
+    implementation 'com.github.khirr:Android-Privacy-Policy:1.0.1'
+
 
 }

@@ -4,52 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ui.MainActivity">
 
 
     <EditText
         android:id="@+id/nikInput"
-        android:layout_width="380dp"
-        android:layout_height="53dp"
+        android:layout_width="324dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
         android:hint="NIK :"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="43dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/namaInput"
-        android:layout_width="379dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="326dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="12dp"
         android:hint="Nama :"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/nikInput"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteX="19dp" />
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nikInput" />
 
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
+        android:id="@+id/boxresult"
+        android:layout_width="372dp"
+        android:layout_height="405dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="238dp"
         android:padding="24dp"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="314dp"
+            android:layout_height="231dp"
+            android:layout_alignTop="@+id/line1"
+            android:layout_marginTop="-4dp"
+            android:src="@drawable/logo2" />
+
         <TextView
-            android:id="@+id/nik"
+            android:id="@+id/nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Nik :"
+            android:layout_below="@id/tpsVIew"
+            android:layout_marginLeft="10dp"
+            android:text="Nama :"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="20sp"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_marginTop="5dp"
+            android:text=""
+
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tpsVIew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="Tps :"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <TextView
@@ -57,10 +102,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/nama"
-            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
             android:text="tempat-lahir :"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <TextView
@@ -68,51 +113,91 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/nama"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginLeft="10dp"
             android:text="Jenis Kelamin :"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <TextView
-            android:id="@+id/nama"
+            android:id="@+id/namaPropinsi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/nik"
-            android:layout_marginTop="5dp"
-            android:text="Nama :"
+            android:layout_below="@id/jnskelamin"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:text="Nama Propinsi :"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
+        <TextView
+            android:id="@+id/namaKabko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namaPropinsi"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:text="Nama KabKo :"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/namaKec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namaKabko"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:text="Nama Kecamatan :"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/namaKel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namaKec"
+            android:layout_marginTop="1dp"
+            android:text="Nama Kelurahan :"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
 
     </RelativeLayout>
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="271dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="88dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_width="107dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="468dp"
+        android:background="@android:color/holo_blue_dark"
         android:onClick="handleRequest"
         android:text="Cari"
         android:textAllCaps="false"
         android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nikInput" />
+        app:layout_constraintTop_toBottomOf="@+id/namaInput"
+        app:layout_constraintVertical_bias="0.166" />
 
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="103dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Kembali"
-        android:textColor="#fff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/relativeLayout" />
+    <!--    <Button-->
+<!--        android:id="@+id/backButton"-->
+<!--        android:layout_width="104dp"-->
+<!--        android:layout_height="42dp"-->
+<!--        android:layout_marginStart="44dp"-->
+<!--        android:layout_marginLeft="44dp"-->
+<!--        android:layout_marginBottom="108dp"-->
+<!--        android:background="@color/colorPrimaryDark"-->
+<!--        android:text="Kembali"-->
+<!--        android:textColor="#fff"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
